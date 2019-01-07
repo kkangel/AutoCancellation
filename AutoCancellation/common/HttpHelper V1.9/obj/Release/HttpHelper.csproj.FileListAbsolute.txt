@@ -1,0 +1,4 @@
+E:\HttpHelper V1.9\bin\Release\HttpHelper.dll
+E:\HttpHelper V1.9\bin\Release\HttpHelper.pdb
+E:\HttpHelper V1.9\obj\Release\HttpHelper.dll
+E:\HttpHelper V1.9\obj\Release\HttpHelper.pdb

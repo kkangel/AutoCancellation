@@ -1,0 +1,10 @@
+E:\HttpHelper V1.9\obj\Debug\HttpHelper.csprojResolveAssemblyReference.cache
+E:\HttpHelper V1.9\bin\Debug\HttpHelper.dll
+E:\HttpHelper V1.9\bin\Debug\HttpHelper.pdb
+E:\HttpHelper V1.9\obj\Debug\HttpHelper.dll
+E:\HttpHelper V1.9\obj\Debug\HttpHelper.pdb
+C:\Users\bleve\Desktop\矿机\国寿自动算单\ClpcAutoCalc\ClpcAutoCalc\Common\HttpHelper V1.9\obj\Debug\HttpHelper.csprojResolveAssemblyReference.cache
+C:\Users\bleve\Desktop\矿机\国寿自动算单\ClpcAutoCalc\ClpcAutoCalc\Common\HttpHelper V1.9\obj\Debug\HttpHelper.dll
+C:\Users\bleve\Desktop\矿机\国寿自动算单\ClpcAutoCalc\ClpcAutoCalc\Common\HttpHelper V1.9\obj\Debug\HttpHelper.pdb
+C:\Users\bleve\Desktop\矿机\国寿自动算单\ClpcAutoCalc\ClpcAutoCalc\Common\HttpHelper V1.9\bin\Debug\HttpHelper.dll
+C:\Users\bleve\Desktop\矿机\国寿自动算单\ClpcAutoCalc\ClpcAutoCalc\Common\HttpHelper V1.9\bin\Debug\HttpHelper.pdb
