@@ -27,9 +27,11 @@ namespace AutoCancellation
         //Queue alFinalFail = new Queue();//最终失败队列
         string cookie = "";
         public User user { get; set; }
-        public Cancellation(User user)
+        public DatePass datePass { get; set; }
+        public Cancellation(User user,DatePass datePass)
         {
             this.user = user;
+            this.datePass = datePass;
         }
 
         public void StartCancel(Queue datetime,string cookie)
@@ -46,17 +48,18 @@ namespace AutoCancellation
             CancellationCheckRecall(alCheckRecallBusiness, alCheckRecallFail);
             //CancellationAllBackForm(alTmp, alCheckRecall, alFailure);
             CancellationCheckRecall(alCheckRecallCompulsory, alCheckRecallFail);
-           // CancellationCheckRecall(alCheckRecallFail, alFinalFail);
+            // CancellationCheckRecall(alCheckRecallFail, alFinalFail);
+            CancellationCheckRecall(alBackAllFormsFailure, alCheckRecallFail);
 
             string strDirectory = Environment.CurrentDirectory;
-            string strFileParthFull = strDirectory + "\\" + user._id + ".txt";
+            string strFileParthFull = strDirectory + "\\" + user._id +" "+datePass.dateStart+"至"+datePass.DateEnd  +".txt";
             FileStream fs = new FileStream(strFileParthFull, FileMode.Create);
             StreamWriter sw = new StreamWriter(fs);
             foreach (string strFail in alBackAllFormsFailure)
             {
                 sw.WriteLine(strFail);
             }
-            foreach (string strFail in alBackAllFormsFailure)
+            foreach (string strFail in alCheckRecallFail)
             {
                 sw.WriteLine(strFail);
             }

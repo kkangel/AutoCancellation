@@ -68,7 +68,8 @@ namespace AutoCancellation
                 //Console.WriteLine(dtDateStart.ToString("yyyy-MM-dd"));
                 //Console.WriteLine(dtDateEnd.ToString("yyyy-MM-dd"));
                 //Console.ReadLine();
-                Cancellation ck = new Cancellation(userCancellation);
+                DatePass dtpass= new DatePass(strDateStart,strDateEnd);
+                Cancellation ck = new Cancellation(userCancellation, dtpass);
                 Queue dateTime = new Queue();
                 for (DateTime i=dtDateStart;i<=dtDateEnd;i= i.AddDays(1))
                 {

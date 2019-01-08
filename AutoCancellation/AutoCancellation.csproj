@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cancellation.cs" />
+    <Compile Include="DatePass.cs" />
     <Compile Include="HttpHelper.cs" />
     <Compile Include="LoginInsure.cs" />
     <Compile Include="Program.cs" />
