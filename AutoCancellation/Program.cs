@@ -78,6 +78,8 @@ namespace AutoCancellation
                     
 
                 }
+                //需要执行两遍
+                ck.StartCancel(dateTime, cookieAllTheTime);
                 ck.StartCancel(dateTime, cookieAllTheTime);
                 Console.WriteLine("{0}至{1}撤单完成",strDateStart,strDateEnd);
                 Console.ReadLine();
