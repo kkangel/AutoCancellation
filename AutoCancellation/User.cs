@@ -14,6 +14,7 @@ namespace AutoCancellation
         public string _comcode { get; set; }
         public string _ipAddress { get; set; }
         public string _qrCode { get; set; }
+        public string _userName { get; set; }
 
         public User(string id,string pwd,string comcode,string qrCode ,string ipaddress)
         {

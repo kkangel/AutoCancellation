@@ -29,3 +29,5 @@ C:\Users\Administrator\source\repos\AutoCancellation\AutoCancellation\obj\Debug\
 C:\Users\Administrator\source\repos\AutoCancellation\AutoCancellation\obj\Debug\AutoCancellation.csproj.CopyComplete
 C:\Users\Administrator\source\repos\AutoCancellation\AutoCancellation\obj\Debug\AutoCancellation.exe
 C:\Users\Administrator\source\repos\AutoCancellation\AutoCancellation\obj\Debug\AutoCancellation.pdb
+C:\Users\Administrator\source\repos\AutoCancellation\AutoCancellation\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\source\repos\AutoCancellation\AutoCancellation\bin\Debug\Newtonsoft.Json.pdb

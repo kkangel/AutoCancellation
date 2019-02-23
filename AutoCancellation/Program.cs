@@ -26,11 +26,18 @@ namespace AutoCancellation
             //string pwd = "789789++";
             //string comcode = "41011064";
 
-            //互动二部
-            string name = "411123199004234524";
+            //互动二部  谢莹莹
+            string id = "411123199004234524";
             string pwd = "0.0.0.0.";
             string comcode = "4101943202";
             string qrcode = "909647";
+
+            //互动二部 范献捷 
+            //string id = "410104197406083512";
+            //string pwd = "0.0.0.0.";
+            //string comcode = "4101943202";
+            //string qrcode = "161049";
+
 
             //东区
             //string name = "412728199110253126";
@@ -41,7 +48,8 @@ namespace AutoCancellation
             //string pwd = "123456++";
             //string comcode = "41017200";
 
-            string cookieAllTheTime = "";
+            string loginInsureCookiealltheway = "";
+            string loginPayDeskalltheway = "";
             
             Console.WriteLine("欢迎使用自动撤单系统");
             Console.WriteLine("系统登陆中");
@@ -52,13 +60,21 @@ namespace AutoCancellation
            // Console.Write("请输入登录机构代码:");
            // string comcode= Console.ReadLine();
 
-            User userCancellation = new User(name, pwd, comcode,qrcode, ipaddress);
-            LoginInsure login = new LoginInsure();
-            if( login.login(userCancellation))
+            User userCancellation = new User(id, pwd, comcode,qrcode, ipaddress);
+            LoginInsure loginInsure = new LoginInsure();
+            if( loginInsure.login(userCancellation))
             {
-                cookieAllTheTime = login.cookiealltheway;
-                Console.WriteLine("用户{0}:登陆成功",name);
-                cookieAllTheTime = login.cookiealltheway;
+                userCancellation._userName = loginInsure.userName;
+                loginInsureCookiealltheway = loginInsure.cookiealltheway;
+                Console.WriteLine("用户{0}:登陆成功",id);
+                LoginPayDesk loginpaydesk = new LoginPayDesk();
+                loginpaydesk.LoginCookiealltheway = loginInsureCookiealltheway;
+                if (loginpaydesk.login(userCancellation))
+                {
+                    loginPayDeskalltheway = loginpaydesk.PayDeskLoginCookiealltheway;
+                    Console.WriteLine("用户{0}:收银台登陆成功", id);
+                }
+                //loginInsureCookiealltheway = loginpaydesk.LoginCookiealltheway;
                 Console.Write("请输入要撤单的起始日期（YYYY-MM-DD）：");
                 string strDateStart=Console.ReadLine();
                 DateTime dtDateStart = Convert.ToDateTime(strDateStart);
@@ -79,8 +95,8 @@ namespace AutoCancellation
 
                 }
                 //需要执行两遍
-                ck.StartCancel(dateTime, cookieAllTheTime);
-                ck.StartCancel(dateTime, cookieAllTheTime);
+                ck.StartCancel(dateTime, loginInsureCookiealltheway,loginPayDeskalltheway);
+                ck.StartCancel(dateTime, loginInsureCookiealltheway, loginPayDeskalltheway);
                 Console.WriteLine("{0}至{1}撤单完成",strDateStart,strDateEnd);
                 Console.ReadLine();
             }

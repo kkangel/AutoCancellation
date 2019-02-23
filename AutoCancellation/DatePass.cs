@@ -8,12 +8,12 @@ namespace AutoCancellation
 {
     class DatePass
     {
-        public string  dateStart { get; set; }
+        public string  DateStart { get; set; }
         public string DateEnd { get; set; }
 
         public DatePass(string dateStart, string dateEnd)
         {
-            this.dateStart = dateStart;
+            this.DateStart = dateStart;
             this.DateEnd = dateEnd;
         }
     }

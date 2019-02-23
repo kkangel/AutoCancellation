@@ -14,6 +14,7 @@ namespace AutoCancellation
         private bool _islogin;//登录状态
         private string _cookiealltheway;//cookie
         private HttpResult _hhloginresult;
+        public string userName { get; set; }
         public HttpResult hhloginresult
         {
             get
@@ -54,6 +55,7 @@ namespace AutoCancellation
             HttpHelper httphelper = new HttpHelper();
             string strloginname = user._id;
             string strloginpwd = user._pwd;
+            
             string strlongincomcode = user._comcode;
             string ipAddress = user._ipAddress;
             string strqrcode = user._qrCode;
@@ -84,7 +86,9 @@ namespace AutoCancellation
 
             this._hhloginresult = httphelper.GetHtml(hiloginItem);
             this._cookiealltheway = this._hhloginresult.Cookie;
-
+            string strname= @"parent.document.frames(""fraTitle"").setTitleInfo(""";
+            string strnameend = @"";
+            userName= ContentHelper.GetMidString(hhloginresult.Html, strname, strnameend);
             return this._islogin = !this._hhloginresult.Html.Contains("302 Moved Temporarily");
         }
     }
