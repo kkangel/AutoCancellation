@@ -31,3 +31,16 @@ C:\Users\Administrator\source\repos\AutoCancellation\AutoCancellation\obj\Debug\
 C:\Users\Administrator\source\repos\AutoCancellation\AutoCancellation\obj\Debug\AutoCancellation.pdb
 C:\Users\Administrator\source\repos\AutoCancellation\AutoCancellation\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Administrator\source\repos\AutoCancellation\AutoCancellation\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\bin\Debug\AutoCancellation.exe.config
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\bin\Debug\AutoCancellation.exe
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\bin\Debug\AutoCancellation.pdb
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\bin\Debug\HtmlAgilityPack.xml
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\bin\Debug\Newtonsoft.Json.xml
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\obj\Debug\AutoCancellation.csprojAssemblyReference.cache
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\obj\Debug\AutoCancellation.csproj.CoreCompileInputs.cache
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\obj\Debug\AutoCancellation.csproj.CopyComplete
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\obj\Debug\AutoCancellation.exe
+C:\Users\bleve\Source\Repos\kkangel\AutoCancellation\AutoCancellation\obj\Debug\AutoCancellation.pdb

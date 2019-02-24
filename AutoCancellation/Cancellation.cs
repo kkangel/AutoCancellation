@@ -105,7 +105,7 @@ namespace AutoCancellation
             HttpResult hrResult = new HttpResult();
             HttpHelper hhHelper = new HttpHelper();
             HttpItem hiItem = new HttpItem();
-            
+
             //获取登录权限
             hiItem.URL =
                 string.Format(
@@ -117,16 +117,24 @@ namespace AutoCancellation
             hrResult = hhHelper.GetHtml(hiItem);
             if (hrResult.Html.Contains("true"))
             {
+                //增加一些验证措施
+                //hiItem.URL =
+                //    "http://9.0.6.69:7001/prpall/common/tb/UIProposalCrossIndexQueryInput.jsp?TaskCode=prpall.a01003002011&usercode=411123199004234524&comcode=4101943202";
+                //hiItem.Method = "get";
+                //hiItem.Cookie = loginCookie;
+                //hrResult = hhHelper.GetHtml(hiItem);
+
+
 
                 hiItem.URL = string.Format("http://{0}:7001/prpall/common/tb/UIProposalCrossIndexQueryList.jsp", user._ipAddress);
                 hiItem.ContentType = "application/x-www-form-urlencoded";
                 hiItem.Cookie = loginCookie;
-                hiItem.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)";
-                hiItem.Header["Accept-Encoding"] = "gzip, deflate";
-                hiItem.Header["Accept-Language"] = "zh-Hans-CN,zh-Hans;q=0.5";
-                hiItem.Referer = String.Format("http://9.0.6.69:7001/prpall/common/tb/UIProposalCrossIndexQueryInput.jsp?TaskCode=prpall.a01003002011&usercode={0}&comcode={1}", user._id, user._comcode);
-                hiItem.Accept =
-                    "image/gif, image/jpeg, image/pjpeg, application/x-ms-application, application/xaml+xml, application/x-ms-xbap, */*";
+                
+                //hiItem.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)";
+               // hiItem.Header["Accept-Encoding"] = "gzip, deflate";
+               // hiItem.Header["Accept-Language"] = "zh-Hans-CN,zh-Hans;q=0.5";
+               // hiItem.Referer = String.Format("http://9.0.6.69:7001/prpall/common/tb/UIProposalCrossIndexQueryInput.jsp?TaskCode=prpall.a01003002011&usercode={0}&comcode={1}", user._id, user._comcode);
+               // hiItem.Accept ="image/gif, image/jpeg, image/pjpeg, application/x-ms-application, application/xaml+xml, application/x-ms-xbap, */*";
                 hiItem.Method = "post";
                 Encoding ecode = System.Text.Encoding.GetEncoding("GB2312");
                 //hiItem.Postdata = string.Format("InputDate={0}&RiskCode=0511&OthFlag4=0&VipCheckFlag=0", dt.ToString("yyyy-MM-dd"));

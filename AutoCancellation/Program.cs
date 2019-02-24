@@ -29,7 +29,7 @@ namespace AutoCancellation
             //互动二部  谢莹莹
             string id = "411123199004234524";
             string pwd = "0.0.0.0.";
-            string comcode = "4101943202";
+            string comcode = "4101943201";
             string qrcode = "909647";
 
             //互动二部 范献捷 
@@ -74,9 +74,14 @@ namespace AutoCancellation
                     loginPayDeskalltheway = loginpaydesk.PayDeskLoginCookiealltheway;
                     Console.WriteLine("用户{0}:收银台登陆成功", id);
                 }
+
                 //loginInsureCookiealltheway = loginpaydesk.LoginCookiealltheway;
+
                 Console.Write("请输入要撤单的起始日期（YYYY-MM-DD）：");
-                string strDateStart=Console.ReadLine();
+                string strDateStart = Console.ReadLine();
+                //测试数据
+                //string strDateStart = "2019-01-01";
+                //string strDateEnd = "2019-01-03";
                 DateTime dtDateStart = Convert.ToDateTime(strDateStart);
                 Console.Write("请输入要撤单的截止日期（YYYY-MM-DD）：");
                 string strDateEnd = Console.ReadLine();
@@ -96,7 +101,7 @@ namespace AutoCancellation
                 }
                 //需要执行两遍
                 ck.StartCancel(dateTime, loginInsureCookiealltheway,loginPayDeskalltheway);
-                ck.StartCancel(dateTime, loginInsureCookiealltheway, loginPayDeskalltheway);
+                ck.StartCancel(dateTime, loginInsureCookiealltheway,loginPayDeskalltheway);
                 Console.WriteLine("{0}至{1}撤单完成",strDateStart,strDateEnd);
                 Console.ReadLine();
             }

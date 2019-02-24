@@ -87,7 +87,7 @@ namespace AutoCancellation
             this._hhloginresult = httphelper.GetHtml(hiloginItem);
             this._cookiealltheway = this._hhloginresult.Cookie;
             string strname= @"parent.document.frames(""fraTitle"").setTitleInfo(""";
-            string strnameend = @"";
+            string strnameend = @"""";
             userName= ContentHelper.GetMidString(hhloginresult.Html, strname, strnameend);
             return this._islogin = !this._hhloginresult.Html.Contains("302 Moved Temporarily");
         }
