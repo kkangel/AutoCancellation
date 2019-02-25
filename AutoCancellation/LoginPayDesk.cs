@@ -89,18 +89,19 @@ namespace AutoCancellation
             if (_hhloginresult.Html.Contains("true"))
             {
                 //跨域跳转第二步 /prpall/SGJreceipts.do?actionType=deskPay&TaskCode=prpall.Planfee.newPayment.pay&usercode=411123199004234524&comcode=4101943202
-               // hiloginItem.URL ="/prpall/SGJreceipts.do?actionType=deskPay&TaskCode=prpall.Planfee.newPayment.pay&usercode=411123199004234524&comcode=4101943202";
-               
-               //这个地方不能加地址 我艹是为啥
-                hiloginItem.URL=String.Format("/prpall/SGJreceipts.do?actionType=deskPay&TaskCode=prpall.Planfee.newPayment.pay&usercode={0}&comcode={1}", strloginid,strlogincomcode);
-                hiloginItem.Method = "GET";
-                hiloginItem.Accept ="image/gif, image/jpeg, image/pjpeg, application/x-ms-application, application/xaml+xml, application/x-ms-xbap, */*";
-                hiloginItem.UserAgent =
-                    "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)";
-                hiloginItem.Host = "9.0.6.69:7001";
-                hiloginItem.Cookie = LoginCookiealltheway;
-               // hiloginItem.Referer ="http://9.0.6.69:7001/prpall/processUtiMenu.do?actionType=showMenu&taskCode=showMenu&menuStyle=null";
-                hhloginresult = httphelper.GetHtml(hiloginItem);
+                // hiloginItem.URL ="/prpall/SGJreceipts.do?actionType=deskPay&TaskCode=prpall.Planfee.newPayment.pay&usercode=411123199004234524&comcode=4101943202";
+
+                //这个地方不能加地址 我艹是为啥
+                //2019-02-25 临时注销掉
+               // hiloginItem.URL=String.Format("/prpall/SGJreceipts.do?actionType=deskPay&TaskCode=prpall.Planfee.newPayment.pay&usercode={0}&comcode={1}", strloginid,strlogincomcode);
+               // hiloginItem.Method = "GET";
+               // hiloginItem.Accept ="image/gif, image/jpeg, image/pjpeg, application/x-ms-application, application/xaml+xml, application/x-ms-xbap, */*";
+               // hiloginItem.UserAgent =
+               //     "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)";
+               // hiloginItem.Host = "9.0.6.69:7001";
+               // hiloginItem.Cookie = LoginCookiealltheway;
+               //// hiloginItem.Referer ="http://9.0.6.69:7001/prpall/processUtiMenu.do?actionType=showMenu&taskCode=showMenu&menuStyle=null";
+               // hhloginresult = httphelper.GetHtml(hiloginItem);
 
               
                 

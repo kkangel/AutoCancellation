@@ -66,8 +66,8 @@ namespace AutoCancellation
             WithdrawPaymentRecords(alCollectionNumber);
 
             //主动撤回撤消缴费记录后的数据
-           // CancellationAllBackForm(alPayBusiness, alCheckRecallBusiness, alPayTemp, alBackAllFormsFailure);
-           // CancellationAllBackForm(alPayCompulsory, alCheckRecallCompulsory, alPayTemp, alBackAllFormsFailure);
+            CancellationAllBackForm(alPayBusiness, alCheckRecallBusiness, alPayTemp, alBackAllFormsFailure);
+            CancellationAllBackForm(alPayCompulsory, alCheckRecallCompulsory, alPayTemp, alBackAllFormsFailure);
 
             //撤单
             CancellationCheckRecall(alCheckRecallBusiness, alCheckRecallFail);
