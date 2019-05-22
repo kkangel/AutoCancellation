@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -404,7 +405,12 @@ namespace AutoCancellation
             while (quCheck.Count > 0)
             {
                 object o = quCheck.Dequeue();
-                hhItem.URL = string.Format("http://{1}:7001/prpall/commonship/tbcb/UIPrpslPoliWithdrawSubmit.jsp?BIZTYPE=PROPOSAL&BizNo={0}&reason=AutoCancellation", o.ToString(), user._ipAddress);
+                //hhItem.URL = string.Format("http://{1}:7001/prpall/commonship/tbcb/UIPrpslPoliWithdrawSubmit.jsp?BIZTYPE=PROPOSAL&BizNo={0}&reason=AutoCancellation", o.ToString(), user._ipAddress);
+                //string reason = System.Web.HttpUtility.UrlEncode("自动撤单", System.Text.Encoding.UTF8);
+                string reason = "自动撤单";
+                Encoding gb2312=  Encoding.GetEncoding("GB2312");
+                string gb2312Reason = System.Web.HttpUtility.UrlEncode(reason, gb2312);
+                hhItem.URL = string.Format("http://{1}:7001/prpall/commonship/tbcb/UIPrpslPoliWithdrawSubmit.jsp?BIZTYPE=PROPOSAL&BizNo={0}&reason={2}", o.ToString(), user._ipAddress, gb2312Reason);
                 hhItem.ContentType = "application/x-www-form-urlencoded";
                 hhItem.Method = "post";
                 hhItem.Cookie = loginCookie;

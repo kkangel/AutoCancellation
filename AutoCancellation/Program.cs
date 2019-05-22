@@ -22,15 +22,29 @@ namespace AutoCancellation
             //string comcode = "4101726001";
 
             //未来 乔
-            //string name = "412322197909194869";
+            //string id = "412322197909194869";
             //string pwd = "789789++";
             //string comcode = "41011064";
+            //string qrcode = "925179";
 
             //互动二部  谢莹莹
             string id = "411123199004234524";
             string pwd = "0.0.0.0.";
             string comcode = "4101943201";
             string qrcode = "909647";
+
+            //互动四部  
+            //string id = "411422199106133011";
+            //string pwd = "123123..";
+            //string comcode = "4101943401";
+            //string qrcode = "528018";
+
+            //互动五部  刘建安
+            //string id = "410725199003199776";
+            //string pwd = "123456++";
+            //string comcode = "4101943502";
+            //string qrcode = "685526";
+
 
             //互动二部 范献捷 
             //string id = "410104197406083512";
